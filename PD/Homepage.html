@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/30020adebf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="animation">
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <header>
+        <a class="logo" href="Homepage.html">ChrisZ</a>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="Homepage">
+            <p class="line1">Hi, my name is</p>
+            <div class="name">
+                <p>Christopher Zeng.</p>
+                <P>I am a Programmer.</P>
+            </div>
+            <p class="line2">I'm a student of Republic Polytechnic currently pursuing a diploma in Digital Design and
+                Development.</p>
+            <a href="" class="btn">View More</a>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1><br>
+                    <p>A Student of Republic Polytechnic currently pursuing a diploma in Digital Design and
+                        Development.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('awards')">Awards</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Devlopment</span><br>PhP/Html/Python/Java</li>
+                            <li><span>App Development</span><br>Android Programming</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">   
+                        <ul>
+                            <li><span>2022 - Current</span><br>Diploma in Digital Design and Development</li>
+                            <li><span>2016 - 2020</span><br>O-Levels/N-Levels</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="awards">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Diploma in Digital Design and Development</li>
+                            <li><span>2016 - 2020</span><br>O-Levels/N-Levels</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Designs</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas suscipit eius atque inventore
+                        aliquam ab in quibusdam porro hic ducimus sunt error quos repudiandae ad autem, nulla
+                        recusandae. Tenetur, doloribus.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Ui/Ux</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In laboriosam ut animi praesentium
+                        accusantium consequatur excepturi vitae ab? Temporibus ipsum sunt iure in provident. Harum nam
+                        laborum sint qui tenetur.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+
+    </section>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
