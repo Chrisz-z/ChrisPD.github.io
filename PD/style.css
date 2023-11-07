@@ -88,7 +88,7 @@ header ul li a.active {
 .name {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 500%;
+    font-size: 400%;
     font-family: 'Merriweather', serif;
 }
 
@@ -201,7 +201,7 @@ header ul li a.active {
 }
 
 .work-list div{
-    background: #696464 ;
+    background: #636262ab ;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -230,9 +230,33 @@ header ul li a.active {
     transform: translateY(-10px);
 }
 
+.img-pf{
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+
+
+
 #contact {
     height: 90vh;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .boxes {
     position: absolute;
