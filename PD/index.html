@@ -25,11 +25,11 @@
     </div>
 
     <header>
-        <a class="logo" href="index.html">ChrisZ</a>
+        <img src="Logo.svg" class="svg">
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -46,6 +46,7 @@
         <a href="#about" class="btn">About Me</a>
     </section>
 
+
     <section id="about">
         <div class="container">
             <div class="row">
@@ -54,7 +55,8 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1><br>
-                    <p style="font-family: 'League Spartan', sans-serif;">A Student of Republic Polytechnic currently pursuing a diploma in Digital Design and
+                    <p style="font-family: 'League Spartan', sans-serif;">A Student of Republic Polytechnic currently
+                        pursuing a diploma in Digital Design and
                         Development.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -85,36 +87,49 @@
         </div>
     </section>
 
-    <section id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Works</h1>
-            <div class="work-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
-                    <img src="mv-site.jpg" class="img-pf">
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Ui/Ux</h2>
-                    <img src="xd-travelsite.jpg" class="img-pf">
-                </div>
-            </div>
-            <div class="work-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>App Development</h2>
-                    <img src="Android-Song-app.jpg" class="img-pf">
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Artworks</h2>
-                    <img src="ps-poster.jpg" class="img-pf">
-                </div>
-            </div>
 
+    <section id="Portfolio">
+        <div class="container">
+            <div class="row">
+                <h1 class="sub-title">My Works</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="mv-site.jpg">
+                        <div class="layer">
+                            <h3>Movie Website</h3>
+                            <p>This is a movie website done using php/html using data from a database.</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="xd-travelsite.jpg">
+                        <div class="layer">
+                            <h3>Movie Website</h3>
+                            <p>This is a protoype travel website done using Adobe XD.</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="Android-movie-app.jpg">
+                        <div class="layer">
+                            <h3>MovieList App</h3>
+                            <p>This is a like a notepad/list app to store movie information, made using android programming.</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="ps-poster.jpg">
+                        <div class="layer">
+                            <h3>Poster Design</h3>
+                            <p>This is a Poster design that was made using Adobe Photoshop.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="pf-btn" id="toggleButton">Load More</button>
+            </div>
         </div>
     </section>
+
+
+
+
 
 
 
@@ -125,7 +140,7 @@
 
 
 
-
+    <!--Script for About me-->
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -141,4 +156,39 @@
         }
     </script>
 
+
+    <!--Script for portfolio-->
+    <script>
+        const toggleButton = document.getElementById("toggleButton");
+        const workItems = document.querySelectorAll(".work");
+        let itemsToShow = 2;
+        let visibleItems = itemsToShow+2;
+        let showingMore = false;
+
+        for (let i = 0; i < itemsToShow; i++) {
+            if (workItems[i]) {
+                workItems[i].style.display = "block";
+            }
+        }
+
+        toggleButton.addEventListener("click", function () {
+            for (let i = 0; i < workItems.length; i++) {
+                if (i < visibleItems) {
+                    workItems[i].style.display = "block";
+                } else {
+                    workItems[i].style.display = "none";
+                }
+            }
+
+            showingMore = !showingMore;
+
+            if (showingMore) {
+                toggleButton.textContent = "Load More";
+                visibleItems = workItems.length;
+            } else {
+                toggleButton.textContent = "Load Less";
+                visibleItems = itemsToShow;
+            }
+        });
+    </script>
 </body>
