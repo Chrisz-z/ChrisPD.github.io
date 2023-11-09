@@ -291,11 +291,11 @@ header ul li a.active {
 }
 
 .contact-left {
-    flex-basis: 35%;
+    flex-basis: 45%;
 }
 
 .contact-right {
-    flex-basis: 60%;
+    flex-basis: 55%;
 }
 
 .contact-left p {
