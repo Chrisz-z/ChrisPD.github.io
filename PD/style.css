@@ -13,23 +13,29 @@ body {
 
 .container {
     padding: 10px 10%;
+    color: #fff;
 }
 
 header {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     padding: 20px;
     justify-content: space-between;
     align-items: center;
+    background-color: #000000;
+    z-index: 100;
 }
+
 
 .svg {
     display: flex;
     width: 5%;
     transition: transform 1s;
 }
-.svg:hover{
+
+.svg:hover {
     transform: rotate(360deg);
 }
 
@@ -133,7 +139,7 @@ header ul li a.active {
     flex-basis: 60%;
 }
 
-.sub-title{
+.sub-title {
     font-size: 50px;
     font-weight: 600;
     color: #ffffff;
@@ -195,7 +201,6 @@ header ul li a.active {
 
 #Portfolio {
     padding: 80px 0;
-    height: 100vh;
 }
 
 .work-list {
@@ -251,7 +256,8 @@ header ul li a.active {
     padding: 0 40px;
     text-align: center;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
     transition: height 0.5s;
 }
 
@@ -274,16 +280,77 @@ header ul li a.active {
 
 
 /*   contact me   */
-
-#contact {
-    height: 90vh;
+#contact{
+    margin-top: 100px;
+}
+.contact-left {
+    flex-basis: 35%;
 }
 
+.contact-right {
+    flex-basis: 60%;
+}
 
+.contact-left p {
+    font-family: 'League Spartan', sans-serif;
+}
+.contact-left p i {
+    color: #00ffff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #00ffff;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: transparent;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: 'League Spartan', sans-serif;
 
-
-
-
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #000;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright p{
+    color: #fff;
+}
 
 
 
