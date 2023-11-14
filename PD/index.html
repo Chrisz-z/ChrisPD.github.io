@@ -24,10 +24,16 @@
         </ul>
     </div>
 
-    <header>
+    <header class="header">
         <img src="Logo.svg" class="svg">
         <nav>
             <ul>
+                <div class="mobile-menu-icon" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
                 <li><a href="#about">About</a></li>
                 <li><a href="#Portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -36,16 +42,16 @@
     </header>
 
     <section class="Homepage">
-        <div class="container">
-        <p class="line1">Hi, my name is</p>
-        <div class="name">
-            <p>Christopher Zeng.</p>
-            <P>I am a Programmer.</P>
+        <div class="Homepage-div">
+            <p class="line1">Hi, my name is</p>
+            <div class="name">
+                <p>Christopher Zeng.</p>
+                <P>I am a Programmer.</P>
+            </div>
+            <p class="line2">I'm a student of Republic Polytechnic currently pursuing a diploma in Digital Design and
+                Development.</p>
+            <a href="#about" class="btn">About Me</a>
         </div>
-        <p class="line2">I'm a student of Republic Polytechnic currently pursuing a diploma in Digital Design and
-            Development.</p>
-        <button href="#about" class="btn">About Me</button>
-    </div>
     </section>
 
 
@@ -113,7 +119,8 @@
                         <img src="Android-movie-app.jpg">
                         <div class="layer">
                             <h3>MovieList App</h3>
-                            <p>This is a like a notepad/list app to store movie information, made using android programming.</p>
+                            <p>This is a like a notepad/list app to store movie information, made using android
+                                programming.</p>
                         </div>
                     </div>
                     <div class="work">
@@ -148,7 +155,7 @@
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="enail" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <button type="submit" class="btn2">Submit</button>
                     </form>
                 </div>
             </div>
@@ -182,7 +189,7 @@
         const toggleButton = document.getElementById("toggleButton");
         const workItems = document.querySelectorAll(".work");
         let itemsToShow = 2;
-        let visibleItems = itemsToShow+2;
+        let visibleItems = itemsToShow + 2;
         let showingMore = false;
 
         for (let i = 0; i < itemsToShow; i++) {
@@ -210,5 +217,14 @@
                 visibleItems = itemsToShow;
             }
         });
+    </script>
+
+
+    <!--Script for mobile nav-->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.header ul');
+            navLinks.classList.toggle('show');
+        }
     </script>
 </body>
