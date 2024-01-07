@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Load More / Load Less Images</title>
+    <style>
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .work-list li {
+            display: none;
+            float: left;
+            list-style: none;
+            margin-right: 10px;
+        }
+        .more,
+        .less {
+            background-color: #000;
+            clear: both;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-size: 14px;
+            margin-top: 6px;
+            padding: 6px 0;
+            text-align: center;
+            text-transform: uppercase;
+            width: 320px;
+        }
+    </style>
+</head>
+
+<section id="Mywork">
+    <div class="container">
+        <div class="row">
+            <h1 class="sub-title">My Works</h1>
+            <body>
+                <ul class="work-list">
+                    <li class="work">
+                        <img src="images/Android-movie-app.jpg">
+                        <div class="layer">
+                            <h3>MovieList App</h3>
+                            <p>This is a like a notepad/list app to store movie information, made using android
+                                programming.</p>
+                            <a href="android.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </li>
+                    <li class="work">
+                        <img src="images/xd-travelsite.jpg">
+                        <div class="layer">
+                            <h3>Travel agency website</h3>
+                            <p>This is a protoype travel website done using Adobe XD.</p>
+                            <a href="XD_travel.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </li>
+                    <li class="work">
+                        <img src="images/mv-homepage.jpeg">
+                        <div class="layer">
+                            <h3>Movie Website</h3>
+                            <p>This is a movie website done using php/html using data from a database.</p>
+                            <a href="moviesite.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </li>
+                    <li class="work">
+                        <img src="images/mv-movie.jpeg" />
+                        <div class="layer">
+                            <h3>Movie Website</h3>
+                            <p>This is a movie website done using php/html using data from a database.</p>
+                            <a href="moviesite.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+    </div>
+</section>
+<div class="more pf-btn">Show more</div>
+<div class="less pf-btn">Show less</div>
+
+
+</body>
+
+
+<script>
+    $(document).ready(function () {
+        $('.work-list li:lt(2)').show();
+        $('.less').hide();
+        var items = 4;
+        var shown = 2;
+        $('.more').click(function () {
+            $('.less').show();
+            shown = $('.work-list li:visible').length + 2;
+            if (shown < items) {
+                $('.work-list li:lt(' + shown + ')').show(300);
+            } else {
+                $('.work-list li:lt(' + items + ')').show(300);
+                $('.more').hide();
+            }
+        });
+        $('.less').click(function () {
+            $('.work-list li').not(':lt(2)').hide(300);
+            $('.more').show();
+            $('.less').hide();
+        });
+    });
+</script>
+
+</body>
+
+</html>
