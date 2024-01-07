@@ -43,7 +43,7 @@
     </nav>
 
 
-    <div class="carousel-container mx-auto">
+    <div class="vid-container mx-auto">
         <video id="video1" src="video/travelsite.mp4" alt="" class="carou-img" autoplay muted loop></video>
     </div>
 
@@ -62,56 +62,7 @@
         </div>
     </section>
 
-    <section id="AboutWork">
-        <div class="container">
-            <div class="row">
-                <ul class="about_work">
-                    <li class="aw">
-                        <img src="images/mv-homepage.jpeg">
-                    </li>
-                    <li class="aw">
-                        <img src="images/mv-movie.jpeg">
-                    </li>
-                    <li class="aw">
-                        <img src="images/mv-review.jpeg">
-                    </li>
-                    <li class="aw">
-                        <img src="images/mv-review2.jpeg">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <div class="more pfp-btn">Show more</div>
-    <div class="less pfp-btn">Show less</div>
-
     <div class="copyright">
         <p>Copyright © ChrisZ</p>
     </div>
-
-
-
-    <script>
-        $(document).ready(function () {
-            $('.about_work li:lt(2)').show();
-            $('.less').hide();
-            var items = 4;
-            var shown = 2;
-            $('.more').click(function () {
-                $('.less').show();
-                shown = $('.about_work li:visible').length + 2;
-                if (shown < items) {
-                    $('.about_work li:lt(' + shown + ')').show(300);
-                } else {
-                    $('.about_work li:lt(' + items + ')').show(300);
-                    $('.more').hide();
-                }
-            });
-            $('.less').click(function () {
-                $('.about_work li').not(':lt(2)').hide(300);
-                $('.more').show();
-                $('.less').hide();
-            });
-        });
-    </script>
 </body>

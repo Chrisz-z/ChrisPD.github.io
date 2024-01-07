@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/30020adebf.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&family=Merriweather:wght@300&display=swap');
     </style>
@@ -27,26 +28,18 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand"><img src="images/Logo.svg" alt="Logo" class="svg"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown">Portfolio</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Placeholder</a></li>
-                            <li><a class="dropdown-item" href="#">Placeholder</a></li>
-                            <li><a class="dropdown-item" href="#">Placeholder</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <a class="navbar-brand" href="index.html">
+            <img src="images/Logo.svg" alt="Logo" class="svg">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+            <span class="navbar-toggler-icon" style="margin-right: 5px;"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+            <ul class="navbar-nav" style="margin-right: 5px;">
+                <li class="nav-item"><a class="nav-link active" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#Mywork">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -56,16 +49,13 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/" alt="" class="carou-img">
+                    <img src="images/poster1.jpg" alt="" class="carou-img">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/" alt="" class="carou-img">
+                    <img src="images/poster2.jpg" alt="" class="carou-img">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/" alt="" class="carou-img">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/" alt="" class="carou-img">
+                    <img src="images/poster3.jpg" alt="" class="carou-img">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -81,23 +71,70 @@
         </div>
     </div>
 
-
-    <section id="contact">
+    <section id="description">
         <div class="container">
             <div class="row">
                 <h1 class="pfp-title">Description</h1>
                 <div class="pfp-left">
                     <P><span>Year created:</span><br>2023</P>
-                    <P><span>Languages/Tools used:</span><br>HTML, CSS, PHP, mySQL</P>
+                    <P><span>Languages/Tools used:</span><br>Photoshop</P>
                 </div>
                 <div class="pfp-right">
                     <p>This is a movie website done using php/html using data from a database.</p>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>Copyright © ChrisZ</p>
+
+    </section>
+
+    <section id="AboutWork">
+        <div class="container">
+            <div class="row">
+                <ul class="about_work">
+                    <li class="aw">
+                        <img src="images/poster1.jpg">
+                    </li>
+                    <li class="aw">
+                        <img src="images/poster2.jpg">
+                    </li>
+                    <li class="aw">
+                        <img src="images/poster3.jpg">
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
+    <div class="more aw-btn">Show more</div>
+    <div class="less aw-btn">Show less</div>
+
+    <div class="copyright">
+        <p>Copyright © ChrisZ</p>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.about_work li:lt(1)').show();
+            $('.less').hide();
+            var items = 3;
+            var shown = 1;
+            $('.more').click(function () {
+                $('.less').show();
+                shown = $('.about_work li:visible').length + 2;
+                if (shown < items) {
+                    $('.about_work li:lt(' + shown + ')').show(300);
+                } else {
+                    $('.about_work li:lt(' + items + ')').show(300);
+                    $('.more').hide();
+                }
+            });
+            $('.less').click(function () {
+                $('.about_work li').not(':lt(1)').hide(300);
+                $('.more').show();
+                $('.less').hide();
+            });
+        });
+    </script>
 
 </body>
