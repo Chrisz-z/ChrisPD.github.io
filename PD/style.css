@@ -380,35 +380,42 @@ form .btn2 {
     cursor: pointer;
 }
 
+.mobile-btn {
+    display: flex;
+    justify-content: center;
+}
+
 .btn2:hover {
     transform: scale(1.1) translateY(-5px);
 }
 
 .copyright {
+    margin-top: 30px;
+    position: relative;
+    left: 0;
+    bottom: 0;
     width: 100%;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    font-weight: 300;
-    margin-top: 20px;
+    font-family: 'Merriweather', serif;
+    font-size: 12px;
 }
-
-.copyright p {
-    color: #fff;
+.copyright2 {
+    margin-top: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 12px;
 }
 
 /* description */
 
-#description {
-    margin-top: 90px;
-}
-
 .carousel-container {
     width: 70%;
-    margin: 20px auto;
-}
-
-.vid-container {
-    width: 75%;
     margin: 20px auto;
 }
 
@@ -442,6 +449,100 @@ form .btn2 {
     height: auto;
 }
 
+#description {
+    margin-top: 90px;
+}
+
+.pfp-title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pfp-left {
+    flex-basis: 20%;
+}
+
+.pfp-left p span {
+    color: #00ffff;
+    font-family: 'Merriweather', serif;
+}
+
+.pfp-left p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+}
+
+.pfp-right {
+    flex-basis: 75%;
+}
+
+.pfp-right p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 20px;
+
+}
+
+.vid-container {
+    margin-top: 10px;
+}
+
+#vid-horizontal {
+    width: 70%;
+    height: auto;
+    border-radius: 2%;
+}
+
+#vid-vertical {
+    width: 70%;
+    height: auto;
+    border-radius: 2%;
+}
+
+#vid-vertical-ward {
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+
+#description-vert {
+    margin-top: 30px;
+}
+
+.pfp-vert {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pfp-left-vert {
+    flex-basis: 40%
+}
+
+.pfp-right-vert p span {
+    color: #00ffff;
+    font-family: 'Merriweather', serif;
+}
+
+.pfp-right-vert p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+}
+
+.pfp-right-vert {
+    flex-basis: 60%;
+}
 
 #AboutWork {
     padding: 80px 0;
@@ -488,39 +589,7 @@ form .btn2 {
     transition: transform 0.5s;
 }
 
-.pfp-title {
-    font-size: 40px;
-    font-weight: 600;
-    color: #ffffff;
-    font-family: 'Merriweather', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
-.pfp-left {
-    flex-basis: 20%;
-}
-
-.pfp-left p span {
-    color: #00ffff;
-    font-family: 'Merriweather', serif;
-}
-
-.pfp-left p {
-    font-family: 'League Spartan', sans-serif;
-    font-size: 16px;
-}
-
-.pfp-right {
-    flex-basis: 75%;
-}
-
-.pfp-right p {
-    font-family: 'League Spartan', sans-serif;
-    font-size: 20px;
-}
 
 /*   Background animation   */
 
@@ -617,6 +686,11 @@ form .btn2 {
         padding: 50px 0;
     }
 
+    #Mywork {
+        padding: 0;
+        margin-top: 70px;
+    }
+
     .navbar a {
         display: flex;
     }
@@ -681,7 +755,7 @@ form .btn2 {
         font-size: 16px;
     }
 
-    .pf-btn {
+    .pfp-btn {
         font-size: 14px;
         width: 60%;
     }
@@ -707,10 +781,11 @@ form .btn2 {
         display: none;
     }
 
-    .vid-container {
+    #vid-horizontal {
         width: 90%;
         margin: 20px auto;
     }
+
 
     #AboutWork {
         padding: 0;
@@ -729,4 +804,15 @@ form .btn2 {
         margin: 0 auto 20px;
     }
 
+    #vid-vertical {
+        margin-bottom: 20px;
+    }
+
+    #vid-vertical-ward{
+        margin-bottom: 20px;
+    }
+
+    .copyright2{
+        position: relative;
+    }
 }
