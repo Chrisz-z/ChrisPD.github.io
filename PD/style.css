@@ -806,10 +806,14 @@ form .btn2 {
 
     #vid-vertical {
         margin-bottom: 20px;
+        width: 65% ;
+        height: auto;
     }
 
     #vid-vertical-ward{
         margin-bottom: 20px;
+        width: 60% ;
+        height: auto;
     }
 
     .copyright2{
