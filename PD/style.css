@@ -419,11 +419,6 @@ form .btn2 {
     margin: 20px auto;
 }
 
-.container-vert{
-    color: #fff;
-    padding: 0px 10%;
-}
-
 .carousel-inner {
     border-radius: 3%;
 }
@@ -456,6 +451,11 @@ form .btn2 {
 
 #description {
     margin-top: 90px;
+}
+
+.container-vert{
+    padding: 0px 10%;
+    color: #fff;    
 }
 
 .pfp-title {
@@ -532,21 +532,21 @@ form .btn2 {
 }
 
 .pfp-left-vert {
-    flex-basis: 60%
+    flex-basis: 40%
 }
 
-.pfp-left-vert p span {
+.pfp-right-vert p span {
     color: #00ffff;
     font-family: 'Merriweather', serif;
 }
 
-.pfp-left-vert p {
+.pfp-right-vert p {
     font-family: 'League Spartan', sans-serif;
     font-size: 16px;
 }
 
 .pfp-right-vert {
-    flex-basis: 40%;
+    flex-basis: 60%;
 }
 
 #AboutWork {
@@ -810,11 +810,11 @@ form .btn2 {
     }
 
     #vid-vertical {
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     #vid-vertical-ward{
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .copyright2{
