@@ -121,13 +121,13 @@
 
     <script>
         $(document).ready(function () {
-            $('.about_work li:lt(2)').show();
+            $('.about_work li:lt(1)').show();
             $('.less').hide();
             var items = 4;
-            var shown = 2;
+            var shown = 1;
             $('.more').click(function () {
                 $('.less').show();
-                shown = $('.about_work li:visible').length + 2;
+                shown = $('.about_work li:visible').length + 3;
                 if (shown < items) {
                     $('.about_work li:lt(' + shown + ')').show(300);
                 } else {
@@ -136,7 +136,7 @@
                 }
             });
             $('.less').click(function () {
-                $('.about_work li').not(':lt(2)').hide(300);
+                $('.about_work li').not(':lt(1)').hide(300);
                 $('.more').show();
                 $('.less').hide();
             });

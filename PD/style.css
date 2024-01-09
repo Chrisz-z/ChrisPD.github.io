@@ -5,6 +5,14 @@
     scroll-behavior: smooth;
 }
 
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  .example {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
 body {
     min-height: 100vh;
     background: #000000;

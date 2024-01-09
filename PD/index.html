@@ -88,8 +88,7 @@
                     </div>
                     <div class="tab-contents" id="awards">
                         <ul>
-                            <li><span>2022 - Current</span><br>Diploma in Digital Design and Development</li>
-                            <li><span>2016 - 2020</span><br>O-Levels/N-Levels</li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -224,10 +223,10 @@
             $('.work-list li:lt(2)').show();
             $('.less').hide();
             var items = 8;
-            var shown = 2;
+            var shown = 8;
             $('.more').click(function () {
                 $('.less').show();
-                shown = $('.work-list li:visible').length + 2;
+                shown = $('.work-list li:visible').length + 8;
                 if (shown < items) {
                     $('.work-list li:lt(' + shown + ')').show(300);
                 } else {
