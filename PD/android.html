@@ -46,71 +46,28 @@
     <section id="description-vert">
         <div class="container-vert">
             <div class="row">
+                <h1 class="pfp-vert">Movie notepad</h1>
                 <div class="pfp-left-vert">
                     <div style="text-align: center;">
-                        <video id="vid-vertical" src="video/android.mp4" autoplay muted loop></video>
+                        <video id="vid-vertical-android" src="video/android.mp4" autoplay muted loop></video>
                     </div>
                 </div>
                 <div class="pfp-right-vert">
-                    <h1 class="pfp-vert">Description</h1>
                     <P><span>Year created:</span><br>2023</P>
-                    <P><span>Languages/Tools used:</span><br>Adobe XD</P>
-                    <p>This is a travel website prototype made while i was learning about UI/UX design</p>
+                    <P><span>Languages/Tools used:</span><br> JAVA, Android studios</P>
+                    <p><span>Description:</span><br>
+                        A Notepad app that was created as part of a module learnng about andorid programming, the app
+                        uses a listview to display any movie details that the users include, a toggle button that sorts
+                        by Age rating and also automatically assigning the icons for the rating. Although looking plain
+                        and simple, I really did enjoy creating this application and would love to learn more about
+                        android programming, in the future.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="AboutWork">
-        <div class="container">
-            <div class="row">
-                <ul class="about_work">
-                    <li class="aw">
-                        <img src="images/mv-homepage.jpeg">
-                    </li>
-                    <li class="aw">
-                        <img src="images/mv-movie.jpeg">
-                    </li>
-                    <li class="aw">
-                        <img src="images/mv-review.jpeg">
-                    </li>
-                    <li class="aw">
-                        <img src="images/mv-review2.jpeg">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <div class="more aw-btn">Show more</div>
-    <div class="less aw-btn">Show less</div>
 
     <div class="copyright">
         <p>Copyright © ChrisZ</p>
     </div>
 
-
-
-    <script>
-        $(document).ready(function () {
-            $('.about_work li:lt(2)').show();
-            $('.less').hide();
-            var items = 4;
-            var shown = 2;
-            $('.more').click(function () {
-                $('.less').show();
-                shown = $('.about_work li:visible').length + 2;
-                if (shown < items) {
-                    $('.about_work li:lt(' + shown + ')').show(300);
-                } else {
-                    $('.about_work li:lt(' + items + ')').show(300);
-                    $('.more').hide();
-                }
-            });
-            $('.less').click(function () {
-                $('.about_work li').not(':lt(2)').hide(300);
-                $('.more').show();
-                $('.less').hide();
-            });
-        });
-    </script>
 </body>

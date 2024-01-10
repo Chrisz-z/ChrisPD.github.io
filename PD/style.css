@@ -482,6 +482,7 @@ form .btn2 {
 }
 
 .pfp-left p span {
+    font-size: 16px;
     color: #00ffff;
     font-family: 'Merriweather', serif;
 }
@@ -495,9 +496,16 @@ form .btn2 {
     flex-basis: 75%;
 }
 
+.pfp-right span {
+    font-size: 16px;
+    flex-basis: 75%;
+    color: #00ffff;
+    font-family: 'Merriweather', serif;
+}
+
 .pfp-right p {
     font-family: 'League Spartan', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 
 }
 
@@ -513,6 +521,18 @@ form .btn2 {
 
 #vid-vertical {
     width: 70%;
+    height: auto;
+    border-radius: 2%;
+}
+
+#vid-vertical-android {
+    width: 60%;
+    height: auto;
+    border-radius: 2%;
+}
+
+#vid-vertical-mobile-pf {
+    width: 50%;
     height: auto;
     border-radius: 2%;
 }
@@ -821,6 +841,10 @@ form .btn2 {
     #vid-horizontal {
         width: 90%;
         margin: 20px auto;
+    }
+
+    .pfp-vert {
+        text-align: center;
     }
 
 
