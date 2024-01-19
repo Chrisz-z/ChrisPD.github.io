@@ -172,6 +172,14 @@
                             <a href="mobile-pf.html"><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </li>
+                    <li class="work">
+                        <img src="images/unity.jpeg">
+                        <div class="layer">
+                            <h3>Escape Room</h3>
+                            <p>This is a Escape room made using Untiy</p>
+                            <a href="unity.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -239,11 +247,11 @@
         $(document).ready(function () {
             $('.work-list li:lt(2)').show();
             $('.less').hide();
-            var items = 8;
-            var shown = 8;
+            var items = 9;
+            var shown = 9;
             $('.more').click(function () {
                 $('.less').show();
-                shown = $('.work-list li:visible').length + 8;
+                shown = $('.work-list li:visible').length + 9;
                 if (shown < items) {
                     $('.work-list li:lt(' + shown + ')').show(300);
                 } else {
